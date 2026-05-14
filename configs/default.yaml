@@ -1,0 +1,26 @@
+data_dir: data
+output_dir: outputs
+labels_file:
+sequences_file:
+msa_dir:
+
+window: 10
+sample_size: 8000
+test_size: 0.2
+seed: 42
+
+batch_size: 64
+num_workers: 0
+epochs: 500
+learning_rate: 0.0003
+weight_decay: 0.00001
+
+d_model: 64
+nhead: 8
+dim_feedforward: 128
+num_layers: 2
+dropout: 0.1
+
+log_every: 50
+save_best: true
+device: auto

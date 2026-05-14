@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rna-3d-folding-disttransformer"
+version = "0.1.0"
+description = "MSA-enhanced Transformer for local RNA 3D pairwise distance prediction."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Priyanshu Pathak"}]
+dependencies = [
+    "torch>=2.3.0",
+    "numpy>=1.26.0",
+    "pandas>=2.0.0",
+    "scikit-learn>=1.4.0",
+    "matplotlib>=3.8.0",
+    "openpyxl>=3.1.0",
+    "PyYAML>=6.0.0",
+    "tqdm>=4.66.0"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0", "ruff>=0.5.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
